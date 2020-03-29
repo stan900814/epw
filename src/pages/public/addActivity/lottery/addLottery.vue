@@ -35,15 +35,15 @@
 				</view>
 				<view>
 					<text>开始时间</text>
-					<picker mode="time" v-model="lotteryInfo.start">请选择时间 ></picker>
+					<picker mode="date" :value="date" @change="bindDateChange('start',$event)">请选择时间 >{{lotteryInfo.start}}</picker>
 				</view>
 				<view>
 					<text>活动持续时间</text>
-					<input type="text" placeholder="" v-model="lotteryInfo.duration">天
+					<input type="text"  v-model="lotteryInfo.duration" >天
 				</view>
 				<view>
 					<text>开奖时间</text>
-					<picker mode="time" v-model="lotteryInfo.end">请选择时间 ></picker>
+					<picker mode="date" :value="date" @change="bindDateChange('end',$event)">请选择时间 >{{lotteryInfo.end}}</picker>
 				</view>
 				<button @tap="submitHandle">提交</button>
 			</form>
@@ -54,7 +54,12 @@
 <script>
 	export default {
 		data() {
+			const currentDate = this.getDate({
+
+			})
 			return {
+				date:currentDate,
+				time:String,
 				lotteryImgList:Array,
 				lotteryInfo:{
 					"name":String,
@@ -63,8 +68,8 @@
 					"minAmount":String,
 					"maxAmount":String,
 					"awardAmount":String,
-					"start":String,
-					"end":String,
+					"start":currentDate,
+					"end":currentDate,
 					"duration":String,
 				}	
 			}
@@ -89,6 +94,25 @@
 				uni.navigateTo({
 					url:'./lotteryInfo.vue'
 				})
+			},
+			getDate() {
+            	const date = new Date();
+            	let year = date.getFullYear();
+            	let month = date.getMonth() + 1;
+            	let day = date.getDate();
+            	month = month > 9 ? month : '0' + month;;
+            	day = day > 9 ? day : '0' + day;
+            	return `${year}-${month}-${day}`;
+			},
+			bindDateChange(payload,e){
+				console.log(e,payload)
+				if(payload == 'start'){
+					console.log(e.detail)
+					this.lotteryInfo.start = e.detail.value
+				}else{
+					console.log(e.detail)
+					this.lotteryInfo.end = e.detail.value
+				}
 			}
 		}
 	}
