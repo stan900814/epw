@@ -28,15 +28,15 @@ export default {
           console.log(event == '抽奖');
           if(event == '抽奖'){
               uni.navigateTo({
-              url:"../public/addActivity/addLottery"
+              url:"../public/addActivity/lottery/addLottery"
             })
           }else if(event == '优惠卷'){
                uni.navigateTo({
-              url:"../public/addActivity/addVolume"
+              url:"../public/addActivity/volume/addVolume"
             })
           }else{
                uni.navigateTo({
-              url:"../public/addActivity/addCard"
+              url:"../public/addActivity/card/addCard"
             })
           }
       }

@@ -25,28 +25,34 @@
 			}
 		},
 		{
-			"path": "pages/public/addActivity/addLottery",
+			"path": "pages/public/addActivity/lottery/addLottery",
 			"style": {
 				"navigationBarTitleText": "添加抽奖活动"
 			}
 		},
 		{
-			"path": "pages/public/addActivity/addCard",
+			"path": "pages/public/addActivity/card/addCard",
 			"style": {
 				"navigationBarTitleText": "添加惠卡"
 			}
 		},
 		{
-			"path": "pages/public/addActivity/addVolume",
+			"path":"pages/public/addActivity/card/cardInfo",
+			"style":{
+				"navigationBarTitleText":"惠卡详情"
+			}
+		},
+		{
+			"path": "pages/public/addActivity/volume/addVolume",
 			"style": {
 				"navigationBarTitleText": "添加优惠卷"
 			}
 		}
 	],
 	"tabBar": {
-		"selectedColor": "FF603C",
+		"selectedColor": "#FF603C",
 		"color": "#9A9A9A",
-		"backgroundColor": "",
+		"backgroundColor": "#FFFFFF",
 		"list": [
 			{
 				"pagePath": "pages/index/index",
@@ -63,7 +69,7 @@
 			{
 				"pagePath": "pages/public/public",
 				"iconPath": "static/tabBar/组 38@3x.png",
-				"selectedIconPath": "",
+				"selectedIconPath": "static/tabBar/组 38@3x.png",
 				"text": "发布"
 			},
 			{
