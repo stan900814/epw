@@ -108,23 +108,39 @@ export default {
       switch (key) {
         case "店铺管理":
 			uni.navigateTo({
-				url:''
+				url:'',
+				success:function(){}
 			})
           break;
         case "购买服务":
-			uni.navigateTo()
+			uni.navigateTo({
+				url:'',
+				success:function(){}
+			})
           break;
         case "门点搜索":
-			uni.navigateTo()
+			uni.navigateTo({
+				url:'',
+				success:function(){}
+			})
           break;
         case "门店入驻":
-			uni.navigateTo()
+			uni.navigateTo({
+				url:'',
+				success:function(){}
+			})
           break;
         case "门店选择":
-			uni.navigateTo()
+			uni.navigateTo({
+				url:'',
+				success:function(){}
+			})
           break;
         case "人员审核":
-			uni.navigateTo()
+			uni.navigateTo({
+				url:'',
+				success:function(){}
+			})
           break;
         default:
           break;
