@@ -1,30 +1,59 @@
 <template>
 	<view>
 		<view>
+			<view>用户信息以及扫码
+			<button open-type="getUserInfo" @getuserinfo="getUserInfo">获取用户信息</button>
+			<button open-type="getPhoneNumber" @getphonenumber="getPhoneNumber">获取手机号</button>
+			<button @tap='login'>登录</button></view>
+		<view>
+			<button @tap="scanCode"><uni-icons type="camera" size="20" ></uni-icons>
+			<text>扫码</text></button>
+			
+		</view>
+		</view>
+		<view>
 			管理
-			<uni-grid :column="3" :show-border="false"  :square="false">
+			<uni-grid :column="3" :show-border="true"  :square="true">
 				<uni-grid-item>
-					<text class="text">店铺管理</text>
+					<button>
+						<uni-icons type="email" size="20" ></uni-icons>
+						<text class="text">店铺管理</text>
+					</button>	
 				</uni-grid-item>
 				<uni-grid-item>
-					<text class="text">购买服务</text>
+					<button>
+						<uni-icons type="email" size="20" ></uni-icons>
+						<text class="text">购买服务</text>
+					</button>	
 				</uni-grid-item>
 			</uni-grid>
 		</view>
 		<view>
 			设置
-			<uni-grid :column="3" :show-border="false"  :square="false">
+			<uni-grid :column="4" :show-border="true"  :square="true">
 				<uni-grid-item>
-					<text class="text">门店搜索</text>
+					<button>
+						<uni-icons type="email" size="20" ></uni-icons>
+						<text class="text">门店搜索</text>
+					</button>
 				</uni-grid-item>
 				<uni-grid-item>
-					<text class="text">门店入驻</text>
+					<button>
+						<uni-icons type="email" size="20" ></uni-icons>
+						<text class="text">门店入驻</text>
+					</button>
 				</uni-grid-item>
 				<uni-grid-item>
-					<text class="text">门店选择</text>
+					<button>
+						<uni-icons type="email" size="20" ></uni-icons>
+						<text class="text">门店选择</text>
+					</button>
 				</uni-grid-item>
 				<uni-grid-item>
-					<text class="text">人员审核</text>
+					<button>
+						<uni-icons type="email" size="20" ></uni-icons>
+						<text class="text">人员审核</text>
+					</button>
 				</uni-grid-item>
 			</uni-grid>
 		</view>
@@ -34,6 +63,7 @@
 <script>
 import uniGrid from "@dcloudio/uni-ui/lib/uni-grid/uni-grid"
 import uniGridItem from "@dcloudio/uni-ui/lib/uni-grid-item/uni-grid-item"
+import uniIcons from "@dcloudio/uni-ui/lib/uni-icons/uni-icons"
 	export default {
 		data() {
 			return {
@@ -42,13 +72,37 @@ import uniGridItem from "@dcloudio/uni-ui/lib/uni-grid-item/uni-grid-item"
 		},
 		components:{
 			uniGrid,
-			uniGridItem
+			uniGridItem,
+			uniIcons
 		},
 		onLoad() {
 
 		},
 		methods: {
-
+			getUserInfo(res){
+				console.log(res)
+			},
+			getPhoneNumber(res){
+				console.log(res)
+			},
+			login(){
+				wx.login(
+					{
+						success(res){
+							console.log(res.code)
+						}
+					}
+				)
+			},
+			scanCode(){
+				uni.scanCode({
+					onlyFromCamera:true,
+					scanType:'qrCode',
+					success:function(params) {
+						console.log(params)
+					}
+				})
+			}
 		}
 	}
 </script>
