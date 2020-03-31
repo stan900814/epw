@@ -50,6 +50,12 @@
 			}
 		},
 		{
+			"path":"pages/public/addActivity/volume/addGoods",
+			"style":{
+				"navigationBarTitleText":"添加商品"
+			}
+		},
+		{
 			"path":"pages/user/storeEntry",
 			"style":{
 				"navigationBarTitleText":"门店信息"
