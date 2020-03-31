@@ -1,6 +1,6 @@
 <template>
   <view>
-    <view>
+    <view v-if="isLogin">
       <view
         >用户信息以及扫码
         <button open-type="getUserInfo" @getuserinfo="getUserInfo">
@@ -16,6 +16,10 @@
           <uni-icons type="camera" size="20"></uni-icons> <text>扫码</text>
         </button>
       </view>
+    </view>
+    <view v-else>
+      <image src="" alt="">头像占位</image>
+      <text>手机号占位</text>
     </view>
     <view>
       管理
@@ -133,7 +137,7 @@ export default {
 				success:function(){}
 			})
           break;
-        case "门点搜索":
+        case "门搜索":
 			uni.navigateTo({
 				url:'',
 				success:function(){}
