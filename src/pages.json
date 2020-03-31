@@ -1,5 +1,6 @@
 {
 	"pages": [
+
 		{
 			"path": "pages/index/index",
 			"style": {
@@ -46,6 +47,12 @@
 			"path": "pages/public/addActivity/volume/addVolume",
 			"style": {
 				"navigationBarTitleText": "添加优惠卷"
+			}
+		},
+		{
+			"path":"pages/user/storeEntry",
+			"style":{
+				"navigationBarTitleText":"门店信息"
 			}
 		}
 	],
