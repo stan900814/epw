@@ -93,7 +93,6 @@ export default {
     view {
       list-style: none;
       text-align: center;
-      vertical-align: center;
       display: flex;
       justify-content: space-between;
       padding: 10rpx 10rpx 10rpx 27.5rpx;

@@ -137,7 +137,7 @@ export default {
             success: function() {}
           });
           break;
-        case "门搜索":
+        case "门店搜索":
           uni.navigateTo({
             url: "./storeSearch",
             success: function() {
