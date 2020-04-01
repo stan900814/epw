@@ -71,18 +71,18 @@
 </template>
 
 <script>
-import utils from '../../../utils'
-import {Login,wxLogin,getPhone} from '../../../api/base'
+import utils from "../../../utils";
+import { Login, wxLogin, getPhone } from "../../../api/base";
 import uniGrid from "@dcloudio/uni-ui/lib/uni-grid/uni-grid";
 import uniGridItem from "@dcloudio/uni-ui/lib/uni-grid-item/uni-grid-item";
 import uniIcons from "@dcloudio/uni-ui/lib/uni-icons/uni-icons";
 export default {
   data() {
     return {
-        encrypted:"",
-        iv:"",
-        wxcode:"",
-        wx_mpapp:"epw2b"
+      encrypted: "",
+      iv: "",
+      wxcode: "",
+      wx_mpapp: "epw2b"
     };
   },
   components: {
@@ -93,73 +93,75 @@ export default {
   onLoad() {},
   methods: {
     getUserInfo(res) {
-      console.log(res)
+      console.log(res);
     },
     getPhoneNumber(res) {
       console.log(res);
     },
     login() {
-      let that = this
-     uni.getUserInfo({
-       provider:'weixin',
-       success:function(res){
-         that.encrypted = res.encryptedData
-         that.iv = res.iv
-       }
-     })
-     wx.login({
-       success:function(res){
-         console.log(res)
-         that.wxcode = res.code
-       }
-     })
+      let that = this;
+      uni.getUserInfo({
+        provider: "weixin",
+        success: function(res) {
+          that.encrypted = res.encryptedData;
+          that.iv = res.iv;
+        }
+      });
+      wx.login({
+        success: function(res) {
+          console.log(res);
+          that.wxcode = res.code;
+        }
+      });
     },
     scanCode() {
       uni.scanCode({
         onlyFromCamera: true,
         scanType: "qrCode",
         success: function(params) {
-          console.log(params)
+          console.log(params);
         }
       });
     },
     skip(key) {
       switch (key) {
         case "店铺管理":
-			uni.navigateTo({
-				url:'',
-				success:function(){}
-			})
+          uni.navigateTo({
+            url: "",
+            success: function() {}
+          });
           break;
         case "购买服务":
-			uni.navigateTo({
-				url:'',
-				success:function(){}
-			})
+          uni.navigateTo({
+            url: "",
+            success: function() {}
+          });
           break;
         case "门搜索":
-			uni.navigateTo({
-				url:'',
-				success:function(){}
-			})
+          uni.navigateTo({
+            url: "./storeSearch",
+            success: function() {
+              console.log("进入门店搜索页面");
+            }
+          });
           break;
         case "门店入驻":
-			uni.navigateTo({
-				url:'',
-				success:function(){}
-			})
+          uni.navigateTo({
+            url: "",
+            success: function() {}
+          });
           break;
         case "门店选择":
-			uni.navigateTo({
-				url:'',
-				success:function(){}
-			})
+          uni.navigateTo({
+            url: "",
+            success: function() {}
+          });
           break;
         case "人员审核":
-			uni.navigateTo({
-				url:'',
-				success:function(){}
-			})
+          uni.navigateTo({
+            url: "",
+            success: function() {}
+          });
           break;
         default:
           break;

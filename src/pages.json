@@ -1,102 +1,108 @@
 {
-	"pages": [
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "首页"
+      }
+    },
+    {
+      "path": "pages/message/message",
+      "style": {
+        "navigationBarTitleText": "消息"
+      }
+    },
+    {
+      "path": "pages/public/public",
+      "style": {
+        "navigationBarTitleText": "发布"
+      }
+    },
+    {
+      "path": "pages/user/user",
+      "style": {
+        "navigationBarTitleText": "我的"
+      }
+    },
+    {
+      "path": "pages/public/addActivity/lottery/addLottery",
+      "style": {
+        "navigationBarTitleText": "添加抽奖活动"
+      }
+    },
+    {
+      "path": "pages/public/addActivity/card/addCard",
+      "style": {
+        "navigationBarTitleText": "添加惠卡"
+      }
+    },
+    {
+      "path": "pages/public/addActivity/card/cardInfo",
+      "style": {
+        "navigationBarTitleText": "惠卡详情"
+      }
+    },
+    {
+      "path": "pages/public/addActivity/volume/addVolume",
+      "style": {
+        "navigationBarTitleText": "添加优惠卷"
+      }
+    },
+    {
+      "path": "pages/public/addActivity/volume/addGoods",
+      "style": {
+        "navigationBarTitleText": "添加商品"
+      }
+    },
 
-		{
-			"path": "pages/index/index",
-			"style": {
-				"navigationBarTitleText": "首页"
-			}
-		},
-		{
-			"path": "pages/message/message",
-			"style": {
-				"navigationBarTitleText": "消息"
-			}
-		},
-		{
-			"path": "pages/public/public",
-			"style": {
-				"navigationBarTitleText": "发布"
-			}
-		},
-		{
-			"path": "pages/user/user",
-			"style": {
-				"navigationBarTitleText": "我的"
-			}
-		},
-		{
-			"path": "pages/public/addActivity/lottery/addLottery",
-			"style": {
-				"navigationBarTitleText": "添加抽奖活动"
-			}
-		},
-		{
-			"path": "pages/public/addActivity/card/addCard",
-			"style": {
-				"navigationBarTitleText": "添加惠卡"
-			}
-		},
-		{
-			"path":"pages/public/addActivity/card/cardInfo",
-			"style":{
-				"navigationBarTitleText":"惠卡详情"
-			}
-		},
-		{
-			"path": "pages/public/addActivity/volume/addVolume",
-			"style": {
-				"navigationBarTitleText": "添加优惠卷"
-			}
-		},
-		{
-			"path":"pages/public/addActivity/volume/addGoods",
-			"style":{
-				"navigationBarTitleText":"添加商品"
-			}
-		},
-		{
-			"path":"pages/user/storeEntry",
-			"style":{
-				"navigationBarTitleText":"门店信息"
-			}
-		}
-	],
-	"tabBar": {
-		"selectedColor": "#FF603C",
-		"color": "#9A9A9A",
-		"backgroundColor": "#FFFFFF",
-		"list": [
-			{
-				"pagePath": "pages/index/index",
-				"iconPath": "static/tabBar/1@3x.png",
-				"selectedIconPath": "static/tabBar/1@3x(1).png",
-				"text": "首页"
-			},
-			{
-				"pagePath": "pages/message/message",
-				"iconPath": "static/tabBar/2@3x.png",
-				"selectedIconPath": "static/tabBar/2@3x(1).png",
-				"text": "消息"
-			},
-			{
-				"pagePath": "pages/public/public",
-				"iconPath": "static/tabBar/组 38@3x(1).png",
-				"selectedIconPath": "static/tabBar/组 38@3x.png",
-				"text": "发布"
-			},
-			{
-				"pagePath": "pages/user/user",
-				"iconPath": "static/tabBar/3@3x.png",
-				"selectedIconPath": "static/tabBar/3@3x(1).png",
-				"text": "我的"
-			}
-		]
-	},
-	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#FFFFFF",
-		"backgroundColor": "#F8F8F8"
-	}
+    {
+      "path": "pages/user/storeEntry",
+      "style": {
+        "navigationBarTitleText": "门店信息"
+      }
+    },
+    {
+      "path": "pages/user/storeSearch",
+      "style": {
+        "navigationBarTitleText": "搜索店铺"
+      }
+    }
+  ],
+  "tabBar": {
+    "selectedColor": "#FF603C",
+    "color": "#9A9A9A",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/tabBar/1@3x.png",
+        "selectedIconPath": "static/tabBar/1@3x(1).png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "iconPath": "static/tabBar/2@3x.png",
+        "selectedIconPath": "static/tabBar/2@3x(1).png",
+        "text": "消息"
+      },
+      {
+        "pagePath": "pages/public/public",
+        "iconPath": "static/tabBar/组 38@3x(1).png",
+        "selectedIconPath": "static/tabBar/组 38@3x.png",
+        "text": "发布"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "static/tabBar/3@3x.png",
+        "selectedIconPath": "static/tabBar/3@3x(1).png",
+        "text": "我的"
+      }
+    ]
+  },
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "backgroundColor": "#F8F8F8"
+  }
 }
